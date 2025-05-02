@@ -94,7 +94,7 @@ public class Insert extends AppCompatActivity {
         } else{
             utils.showAlert("Alert", "Record Not Inserted");
         }
-//        db.close();
+        db.close();
     }
 
     public void onSubmit(View view) {

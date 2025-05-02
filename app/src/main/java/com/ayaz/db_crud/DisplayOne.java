@@ -38,24 +38,24 @@ public class DisplayOne extends AppCompatActivity {
                 cursor.moveToFirst();
                 tv.setText("");
                 while (cursor.isAfterLast() == false) {
-//                    String row = String.format(
-//                            "\n%d %s %d %s %s",
-//                            cursor.getInt(0),
-//                            cursor.getString(1),
-//                            cursor.getInt(2),
-//                            cursor.getString(3),
-//                            cursor.getString(4)
-//                    );
-//                    tv.append(row);
+                    String row = String.format(
+                            "\n%d %s %d %s %s",
+                            cursor.getInt(0),
+                            cursor.getString(1),
+                            cursor.getInt(2),
+                            cursor.getString(3),
+                            cursor.getString(4)
+                    );
+                    tv.append(row);
 
 //                    or
 
-                    tv.append("\n" +
-                            cursor.getInt(0) + " " +
-                            cursor.getString(1) + " " +
-                            cursor.getInt(2) + " " +
-                            cursor.getString(3) + " " +
-                            cursor.getString(4));
+//                    tv.append("\n" +
+//                            cursor.getInt(0) + " " +
+//                            cursor.getString(1) + " " +
+//                            cursor.getInt(2) + " " +
+//                            cursor.getString(3) + " " +
+//                            cursor.getString(4));
 
                     cursor.moveToNext();
                 }
@@ -64,7 +64,7 @@ public class DisplayOne extends AppCompatActivity {
                 tv.setText("No Records Found");
             }
 
-//            db.close();
+            db.close();
 
         } catch (Exception ex) {
             utils.showAlert("Alert", "Something went wrong!");
@@ -73,6 +73,7 @@ public class DisplayOne extends AppCompatActivity {
     }
 
     public void onSubmit(View view) {
+        display();
     }
 
     public void onCancel(View view) {

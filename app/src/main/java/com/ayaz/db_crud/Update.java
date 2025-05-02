@@ -70,6 +70,18 @@ public class Update extends AppCompatActivity {
                 edtTob.setText(hourOfDay + ":" + minute);
             }
         }, hourOfDay, minute, true);
+        edtDob.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                datePickerDialog.show();
+            }
+        });
+        edtTob.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                timePickerDialog.show();
+            }
+        });
 
         spId.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -97,7 +109,7 @@ public class Update extends AppCompatActivity {
                     utils.showAlert("Alert", ex.getMessage());
                 }
 
-//                db.close();
+                db.close();
             }
 
             @Override
