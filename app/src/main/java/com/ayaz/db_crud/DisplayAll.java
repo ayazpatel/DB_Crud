@@ -55,7 +55,7 @@ public class DisplayAll extends AppCompatActivity {
         } catch (Exception ex) {
             utils.showAlert("Alert", "Something Went Wrong");
         }
-
+//        db.close();
     }
 
     public void onSubmit(View view) {

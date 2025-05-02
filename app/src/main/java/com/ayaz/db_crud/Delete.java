@@ -36,6 +36,7 @@ public class Delete extends AppCompatActivity {
         } else {
             utils.showAlert("Alert", "Delete Failed");
         }
+//        db.close();
     }
 
     public void onSubmit(View view) {
