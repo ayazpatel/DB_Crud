@@ -42,6 +42,7 @@ public class DBhelper extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         try {
             db.execSQL("DROP TABLE IF EXISTS student");
+            onCreate(db);
         } catch (Exception ex) {
             showToastError(ex.getMessage());
             showAlertDialogError("onUpgrade() - Error Alert", ex.getMessage());

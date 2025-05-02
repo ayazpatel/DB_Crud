@@ -15,8 +15,8 @@ public class Utils {
         this.context = context;
     };
 
-    public void showToast(String Message) {
-        Toast.makeText(context, Message, Toast.LENGTH_SHORT).show();
+    public void showToast(String message) {
+        Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
     }
 
     public void showAlert(String title, String message) {
