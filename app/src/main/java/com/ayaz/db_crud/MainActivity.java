@@ -37,4 +37,8 @@ public class MainActivity extends AppCompatActivity {
     public void checkbox_radio(View view) {
         startActivity(new Intent(this, Checkbox_RadioButton.class));
     }
+
+    public void FilesOperation(View view) {
+        startActivity(new Intent(this, FilesOperation.class));
+    }
 }
